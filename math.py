@@ -9,6 +9,8 @@ check_data = st.checkbox("Lihat contoh data")
 if check_data:
     st.write(data.head())
 #data.head() #
+sex = st.radio("Masukan jenis kelamin",('female','male'))
+etnik= st.selectbox( "Masukan Group Etnis ",('group A','group B','group C','group D'))
 st.write("Mari kita lihat hasil test nya")
 #data.head() #
 check_nan = data['math score'].isnull().values.any() #check any nan on math score
@@ -19,7 +21,6 @@ from sklearn import svm
 from sklearn.metrics import confusion_matrix, classification_report, accuracy_score
 from sklearn.preprocessing import StandardScaler, LabelEncoder
 from sklearn.model_selection import train_test_split
-Gender = st.radio("Masukan jenis kelamin",('Female','Male'))
 Gender = LabelEncoder()
 data['gender'] = Gender.fit_transform(data['gender'])
 data.head()
