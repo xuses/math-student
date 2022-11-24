@@ -10,7 +10,7 @@ if check_data:
     st.write(data.head())
 #data.head() #
 sex = st.radio("Masukan jenis kelamin",('female','male'))
-if sex="female":
+if sex=="female":
     sex=0
 else :
     sex=1
