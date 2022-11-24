@@ -11,6 +11,7 @@ if check_data:
 #data.head() #
 sex = st.radio("Masukan jenis kelamin",('female','male'))
 etnik= st.selectbox( "Masukan Group Etnis ",('group A','group B','group C','group D'))
+pend_ortu= st.selectbox( "Masukan Pendidikan terakhir orang tua ",('some high','some school','some college','high school',"master's degree","associate's degree"))
 st.write("Mari kita lihat hasil test nya")
 #data.head() #
 check_nan = data['math score'].isnull().values.any() #check any nan on math score
