@@ -1,9 +1,16 @@
+import streamlit as st
 import pandas as pd
 import numpy as np
 import seaborn as sns
 import matplotlib.pyplot as plt
 data = pd.read_csv("StudentsPerformance.xls")
-data.head() #
+st.title("Selamat datng di aplikasi test murid")
+check_data = st.checkbox("Lihat contoh data")
+if check_data:
+    st.write(data.head())
+#data.head() #
+st.write("Mari kita lihat hasil test nya")
+#data.head() #
 check_nan = data['math score'].isnull().values.any() #check any nan on math score
 print (check_nan)
 count_nan = data['math score'].isnull().sum() #count any nan on math score
