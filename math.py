@@ -60,7 +60,7 @@ print(classification_report(y_test,pred))
 print(accuracy_score(y_test,pred)) #accuracy
 Sex = LabelEncoder()
 data['sex'] = Gender.fit_transform(data['sex'])
-a = [[sex,etnik,pend_ortu,maksi,kursus,baca,tulis]] #women,group d,associate's degree, standard lunch, none preparation, 60 reading score, 90 writing score
+a = [sex,etnik,pend_ortu,maksi,kursus,baca,tulis] #women,group d,associate's degree, standard lunch, none preparation, 60 reading score, 90 writing score
 a = s.transform(a)
 b = clf.predict(a)
 b
