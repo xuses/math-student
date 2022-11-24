@@ -24,6 +24,18 @@ elif etnik =="group C":
 else :
     etnik=3
 pend_ortu= st.selectbox( "Masukan Pendidikan terakhir orang tua ",('some high','some school','some college','high school',"master's degree","associate's degree"))
+if pend_ortu == "some high":
+    pend_ortu=0
+elif pend_ortu =="some school":
+    pend_ortu=1
+elif pend_ortu =="some college":
+    pend_ortu=2
+elif pend_ortu =="high school":
+    pend_ortu=3
+elif pend_ortu =="master's degree":
+    pend_ortu=4
+else :
+    pend_ortu=5
 maksi= st.selectbox( "Masukan Jenis Makan siang ",('standard','Free/reduced','none'))
 kursus = st.number_input('Masukan nilai Kursus (dari 0-100) :')
 baca = st.number_input('Masukan nilai Membaca (dari 0-100) :')
