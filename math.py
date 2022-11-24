@@ -43,7 +43,12 @@ elif maksi =="free/reduced":
     maksi=1
 else :
     maksi=2
-kursus = st.number_input('Masukan nilai Kursus (dari 0-100) :')
+#kursus = st.number_input('Masukan nilai Kursus (dari 0-100) :')
+kursus = st.radio("Apakah pernah mengikuti kursus",('complete','none'))
+if kursus=="complete":
+    kursus=0
+else :
+    kursus=1
 baca = st.number_input('Masukan nilai Membaca (dari 0-100) :')
 tulis = st.number_input('Masukan nilai Menulis (dari 0-100) :')
 st.write("Mari kita lihat hasil test nya")
