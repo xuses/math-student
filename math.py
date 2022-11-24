@@ -93,12 +93,9 @@ clf.fit(X_train,y_train)
 pred = clf.predict(X_test)
 #checking prediction house price
 if st.button("Cek Prediksi?"):
-    #st.header("Harga mobil berdasarkan kebutuhan anda adalah Rp {}".format(int(predictions)))
-    #st.subheader("Range perkiraan harga mobil anda adalah Rp {} - Rp {}".format(int(predictions-errors),int(predictions+errors) ))
     print(classification_report(y_test,pred))
     print(accuracy_score(y_test,pred)) #accuracy
     a = [[sex,etnik,pend_ortu,maksi,kursus,baca,tulis]] #women,group d,associate's degree, standard lunch, none preparation, 60 reading score, 90 writing score
     a = s.transform(a)
     b = clf.predict(a)
     b
-
