@@ -15,6 +15,14 @@ if sex=="female":
 else :
     sex=1
 etnik= st.selectbox( "Masukan Group Etnis ",('group A','group B','group C','group D'))
+if etnik == "group A":
+    etnik=0
+else if etnik =="group B":
+    etnik=1
+else if etnik =="group C":
+    etnik=2
+else :
+    etnik=3
 pend_ortu= st.selectbox( "Masukan Pendidikan terakhir orang tua ",('some high','some school','some college','high school',"master's degree","associate's degree"))
 maksi= st.selectbox( "Masukan Jenis Makan siang ",('standard','Free/reduced','none'))
 kursus = st.number_input('Masukan nilai Kursus (dari 0-100) :')
