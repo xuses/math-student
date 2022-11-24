@@ -10,6 +10,10 @@ if check_data:
     st.write(data.head())
 #data.head() #
 sex = st.radio("Masukan jenis kelamin",('female','male'))
+if sex="female":
+    sex=0
+else :
+    sex=1
 etnik= st.selectbox( "Masukan Group Etnis ",('group A','group B','group C','group D'))
 pend_ortu= st.selectbox( "Masukan Pendidikan terakhir orang tua ",('some high','some school','some college','high school',"master's degree","associate's degree"))
 maksi= st.selectbox( "Masukan Jenis Makan siang ",('standard','Free/reduced','none'))
