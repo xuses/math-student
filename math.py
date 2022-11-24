@@ -4,7 +4,7 @@ import numpy as np
 import seaborn as sns
 import matplotlib.pyplot as plt
 data = pd.read_csv("StudentsPerformance.xls")
-st.title("Selamat datng di aplikasi test murid")
+st.title("Selamat datang di aplikasi test murid")
 check_data = st.checkbox("Lihat contoh data")
 if check_data:
     st.write(data.head())
