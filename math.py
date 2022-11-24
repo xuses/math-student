@@ -17,9 +17,9 @@ else :
 etnik= st.selectbox( "Masukan Group Etnis ",('group A','group B','group C','group D'))
 if etnik == "group A":
     etnik=0
-else if etnik =="group B":
+elif etnik =="group B":
     etnik=1
-else if etnik =="group C":
+elif etnik =="group C":
     etnik=2
 else :
     etnik=3
