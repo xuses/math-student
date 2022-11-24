@@ -37,6 +37,12 @@ elif pend_ortu =="master's degree":
 else :
     pend_ortu=5
 maksi= st.selectbox( "Masukan Jenis Makan siang ",('standard','Free/reduced','none'))
+if maksi == "standard":
+    maksi=0
+elif maksi =="free/reduced":
+    maksi=1
+else :
+    maksi=2
 kursus = st.number_input('Masukan nilai Kursus (dari 0-100) :')
 baca = st.number_input('Masukan nilai Membaca (dari 0-100) :')
 tulis = st.number_input('Masukan nilai Menulis (dari 0-100) :')
