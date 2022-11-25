@@ -114,7 +114,6 @@ if st.button("Cek Prediksi?"):
     print(classification_report(y_test,pred))
     print(accuracy_score(y_test,pred)) #accuracy
     a = [[sex,etnik,pend_ortu,maksi,kursus,baca,tulis]] #women,group d,associate's degree, standard lunch, none preparation, 60 reading score, 90 writing score
-    st.write[a]
     a = s.transform(a)
     b = clf.predict(a)
     b
