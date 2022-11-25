@@ -3,18 +3,23 @@ import pandas as pd
 import numpy as np
 import seaborn as sns
 import matplotlib.pyplot as plt
+## Membaca dataset
 data = pd.read_csv("StudentsPerformance.xls")
 st.title("Selamat datang di aplikasi test murid")
+## Menampilkan data
 check_data = st.checkbox("Lihat contoh data")
 if check_data:
     st.write(data.head())
 #data.head() #
+## Memasukan input untuk diprediksi
 sex = st.radio("Masukan jenis kelamin",('female','male'))
+## Mengklasifikasi jenis kelamin menjadi angka agar bisa diproses
 if sex=="female":
     sex=0
 else :
     sex=1
 etnik= st.selectbox( "Masukan Group Etnis ",('group A','group B','group C','group D'))
+## Mengklasifikasi etnik menjadi angka agar bisa diproses
 if etnik == "group A":
     etnik=0
 elif etnik =="group B":
@@ -24,6 +29,7 @@ elif etnik =="group C":
 else :
     etnik=3
 pend_ortu= st.selectbox( "Masukan Pendidikan terakhir orang tua ",('some high','some school','some college','high school',"master's degree","associate's degree"))
+## Mengklasifikasi pendidikan orangtua menjadi angka agar bisa diproses
 if pend_ortu == "some high":
     pend_ortu=0
 elif pend_ortu =="some school":
@@ -37,6 +43,7 @@ elif pend_ortu =="master's degree":
 else :
     pend_ortu=5
 maksi= st.selectbox( "Masukan Jenis Makan siang ",('standard','Free/reduced','none'))
+## Mengklasifikasi makan siang menjadi angka agar bisa diproses
 if maksi == "standard":
     maksi=0
 elif maksi =="free/reduced":
@@ -45,6 +52,7 @@ else :
     maksi=2
 #kursus = st.number_input('Masukan nilai Kursus (dari 0-100) :')
 kursus = st.radio("Apakah pernah mengikuti kursus",('complete','none'))
+## Mengklasifikasi kursus menjadi angka agar bisa diproses
 if kursus=="complete":
     kursus=0
 else :
@@ -53,8 +61,10 @@ baca = st.number_input('Masukan nilai Membaca (dari 0-100) :')
 tulis = st.number_input('Masukan nilai Menulis (dari 0-100) :')
 st.write("Mari kita lihat hasil test nya")
 #data.head() #
+## Cek apakah ada nan di math score
 check_nan = data['math score'].isnull().values.any() #check any nan on math score
 print (check_nan)
+## menghitung jumlah nan
 count_nan = data['math score'].isnull().sum() #count any nan on math score
 print (count_nan)
 from sklearn import svm
