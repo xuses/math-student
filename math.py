@@ -64,7 +64,7 @@ st.write("Mari kita lihat hasil test nya")
 ## Cek apakah ada nan di math score
 check_nan = data['math score'].isnull().values.any() #check any nan on math score
 print (check_nan)
-st.write (check_nan())
+st.write (check_nan)
 ## menghitung jumlah nan
 count_nan = data['math score'].isnull().sum() #count any nan on math score
 print (count_nan)
