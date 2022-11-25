@@ -7,7 +7,7 @@ import matplotlib.pyplot as plt
 data = pd.read_csv("StudentsPerformance.xls")
 st.title("Selamat datang di aplikasi test murid")
 ## Menampilkan data
-check_data = st.checkbox("Lihat contoh data")
+check_data = st.checkbox("Tampilkan data")
 if check_data:
     st.write(data.head())
 #data.head() #
@@ -51,9 +51,9 @@ elif maksi =="free/reduced":
 else :
     maksi=2
 #kursus = st.number_input('Masukan nilai Kursus (dari 0-100) :')
-kursus = st.radio("Apakah pernah mengikuti kursus",('complete','none'))
+kursus = st.radio("Apakah pernah mengikuti kursus",('completed','none'))
 ## Mengklasifikasi kursus menjadi angka agar bisa diproses
-if kursus=="complete":
+if kursus=="completed":
     kursus=0
 else :
     kursus=1
