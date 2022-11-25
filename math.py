@@ -93,9 +93,13 @@ bins = (-1,40,50,60,80,100)
 study = ['Skip Class', 'Sleeping in Class' , 'Npc' , 'Good Student' , 'Lord']
 data['math score'] = pd.cut(data['math score'], bins = bins, labels = study)
 data.head()
-sns.relplot(x='reading score',y="writing score", hue="math score", data= data) #just to make it cool
+check_graf = st.checkbox("cek Graph Data")
+if check_data:
+    sns.relplot(x='reading score',y="writing score", hue="math score", data= data)
+    st.pyplot()
+#sns.relplot(x='reading score',y="writing score", hue="math score", data= data) #just to make it cool
 #but its actually functional since we know that person who good at reading and writing are good at math
-st.pyplot()
+#st.pyplot()
 check_nan = data['math score'].isnull().values.any()
 print (check_nan)
 count_nan = data['math score'].isnull().sum() #check nan again in case there is some data in math score who doesnt get category format
