@@ -116,4 +116,4 @@ if st.button("Cek Prediksi?"):
     a = [[sex,etnik,pend_ortu,maksi,kursus,baca,tulis]] #women,group d,associate's degree, standard lunch, none preparation, 60 reading score, 90 writing score
     a = s.transform(a)
     b = clf.predict(a)
-    #b
+    b
