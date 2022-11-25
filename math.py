@@ -77,6 +77,7 @@ from sklearn import svm
 from sklearn.metrics import confusion_matrix, classification_report, accuracy_score
 from sklearn.preprocessing import StandardScaler, LabelEncoder
 from sklearn.model_selection import train_test_split
+st.set_option('deprecation.showPyplotGlobalUse',False)
 Gender = LabelEncoder()
 data['gender'] = Gender.fit_transform(data['gender'])
 data.head()
