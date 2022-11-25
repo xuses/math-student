@@ -64,13 +64,13 @@ st.write("Mari kita lihat hasil test nya")
 ## Cek apakah ada nan di math score
 check_nan = data['math score'].isnull().values.any() #check any nan on math score
 #print (check_nan)
-check_data = st.checkbox("Check nan")
+check_data = st.checkbox("cek data kosong")
 if check_data:
     st.write(check_nan)
 ## menghitung jumlah nan
 count_nan = data['math score'].isnull().sum() #count any nan on math score
 #print (count_nan)
-check_data = st.checkbox("Check jumlah nan dari math score")
+check_data = st.checkbox("Check jumlah data sosong dari math score")
 if check_data:
     st.write(count_nan)
 from sklearn import svm
