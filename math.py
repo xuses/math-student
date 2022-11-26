@@ -5,7 +5,10 @@ import seaborn as sns
 import matplotlib.pyplot as plt
 ## Membaca dataset
 data = pd.read_csv("StudentsPerformance.xls")
-st.title("Selamat datang di aplikasi test murid")
+#st.title("Selamat datang di aplikasi test murid")
+image = Image.open("lulus.png")
+st.title("Selamat Datang di Aplikasi test murid")
+st.image(image, use_column_width=True)
 ## Menampilkan data
 check_data = st.checkbox("Tampilkan data")
 if check_data:
