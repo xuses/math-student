@@ -74,7 +74,7 @@ if check_data:
 ## menghitung jumlah nan
 count_nan = data['math score'].isnull().sum() #count any nan on math score
 #print (count_nan)
-check_data = st.checkbox("Check jumlah data sosong dari math score")
+check_data = st.checkbox("Check jumlah data kosong dari math score")
 if check_data:
     st.write(count_nan)
 from sklearn import svm
