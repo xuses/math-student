@@ -3,6 +3,7 @@ import pandas as pd
 import numpy as np
 import seaborn as sns
 import matplotlib.pyplot as plt
+from PIL import Image
 ## Membaca dataset
 data = pd.read_csv("StudentsPerformance.xls")
 #st.title("Selamat datang di aplikasi test murid")
